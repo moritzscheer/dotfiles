@@ -1,0 +1,6 @@
+services:
+  nginx:
+    ports:
+      - "80:10080"
+      - "443:10443"
+    image: "registry.access.redhat.com/ubi9/nginx-126:latest"
