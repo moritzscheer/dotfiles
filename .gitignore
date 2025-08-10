@@ -1,22 +1,8 @@
 # Directories
-.config/*
+
+*
 !.config/nvim/
 !.config/tmux/
 
-.cache/
-.vim/
-.gnupg/
-.java/
-.local/
-.secrets/
-projects/
-.ssh/
-
-# Files
-.bash_history
-.bash_logout
-.bash_profile
-.node_repl_history
-.profile
-.viminfo
-.wget-hsts
+!.bashrc
+!.gitignore
