@@ -4,5 +4,7 @@
 !.config/nvim/
 !.config/tmux/
 
+!scripts/
+
 !.bashrc
 !.gitignore
