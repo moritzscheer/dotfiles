@@ -1,3 +1,5 @@
+return {}
+--[[
 return {
 	{
 		"zbirenbaum/copilot.lua",
@@ -63,3 +65,4 @@ return {
 		},
 	},
 }
+--]]

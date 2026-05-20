@@ -81,14 +81,14 @@ alias ping='ping -c 10'                  # ping with 10 packets
 alias less='less -R'                     # raw control chars in less
 alias grep="/usr/bin/grep --color=auto"  # grep with colors
 alias systemctl="sudo systemctl"
-alias vpnup="sudo wg-quick up wg0"
-alias vpndown="sudo wg-quick down wg0"
-alias vpn="sudo wg show wg0"
+alias firewall-cmd="sudo firewall-cmd"
+alias headscale="sudo headscale"
+alias tailscale="sudo tailscale"
 
 # Package manager and editors
 alias dnf='sudo dnf'                     # run dnf with sudo
 alias reboot="sudo reboot now"
-alias shutdown="sudo shutdown now"
+alias shutdown="sudo shutdown"
 
 # Directory navigation shortcuts
 alias home='cd ~'                       # go to home directory
@@ -99,11 +99,11 @@ alias ....='cd ../../..'                # three levels up
 alias .....='cd ../../../..'            # four levels up
 
 # Directory aliases
-alias ls="ls -AFoqv --color --group-directories-first"  # detailed color ls, dirs first
+alias l="ls -AFoqv --color --group-directories-first -h"  # detailed color ls, dirs first
 alias lsr='ls -lRh'                     # recursive ls
 alias lst='ls -ltrh'                    # ls sorted by modification date
-alias lsf="ls -l | egrep -v '^d'"      # list files only
-alias lsd="ls -l | egrep '^d'"         # list directories only
+alias lsf="ls -l | egrep -v '^d'"       # list files only
+alias lsd="ls -l | egrep '^d'"          # list directories only
 alias rmd='rm --recursive --force --verbose'
 
 # Recursive chmod shortcuts
@@ -115,9 +115,11 @@ alias 777='chmod -R 777'                # rwxrwxrwx
 
 # Search and utility aliases
 alias h="history | grep "               # search command history
-alias c='clear'                        # clear terminal screen
-alias p="ps aux | grep "               # search running processes
-alias f="find . | grep "               # search files in cwd
+alias c="clear"                         # clear terminal screen
+alias p="ps aux | grep "                # search running processes
+alias f="find . | grep "                # search files in cwd
+alias e="cd ~/projects/cpp_networking/ && nvim"
+alias ee="cd ~/projects/thesis/ && nvim"
 
 # Utility aliases
 alias cpu="/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"  # top 10 CPU processes
@@ -140,3 +142,8 @@ alias mkbz2='tar -cvjf'        # create .tar.bz2 archive (bzip2 compressed)
 alias unbz2='tar -xvjf'        # extract .tar.bz2 archive
 alias mkgz='tar -cvzf'         # create .tar.gz archive (gzip compressed)
 alias ungz='tar -xvzf'         # extract .tar.gz archive
+
+alias cdp="cd ~/projects/dtdmsbackend && source .venv/bin/activate"
+alias cdpe="cdp  && nvim"
+
+. "$HOME/.local/bin/env"

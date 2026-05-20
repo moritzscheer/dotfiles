@@ -10,8 +10,6 @@ return {
 				javascriptreact = { "eslint_d" },
 				typescript = { "eslint_d" },
 				typescriptreact = { "eslint_d" },
-				c = { "clangd" },
-				cpp = { "cpplint" },
 				rust = { "rust_analyzer" },
 				css = { "stylelint" },
 				sh = { "shellcheck" },

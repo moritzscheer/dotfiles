@@ -283,7 +283,7 @@ return {
 				enabled = true,
 			},
 			indent = {
-				enabled = true,
+				enabled = false,
 				animate = {
 					enabled = false,
 				},
@@ -309,6 +309,11 @@ return {
 					},
 					diagnostics = icons.diagnostics,
 					kinds = icons.kinds,
+					explorer = {
+						git_status = false,
+						git_status_open = false,
+					},
+					git_status = false,
 				},
 				win = {
 					list = {
@@ -321,6 +326,7 @@ return {
 					explorer = {
 						auto_close = true,
 						hidden = true,
+						ignored = true,
 						layout = {
 							preset = "default",
 							preview = false,

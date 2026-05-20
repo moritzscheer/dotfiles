@@ -25,29 +25,9 @@ return {
 					"jsonls",
 					"lua_ls",
 					"pyright",
-					"systemd_ls",
+					"bashls",
 					"ts_ls",
 					"yamlls",
-
-					-- DAPs
-					"codelldb",
-
-					-- Linters
-					"stylelint",
-					"cpplint",
-					"eslint_d",
-					"htmlhint",
-					"jsonlint",
-					"pylint",
-					"shellcheck",
-
-					-- formatters
-					"clang-format",
-					"black",
-					"isort",
-					"prettier",
-					"stylua",
-					"yamlfix",
 				},
 			})
 		end,

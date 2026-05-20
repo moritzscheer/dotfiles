@@ -47,12 +47,12 @@ local options = {
 	tabstop = 2, -- Number of spaces a tab character displays as
 	termguicolors = true, -- Enable 24-bit RGB colors
 	timeoutlen = 1000, -- Wait time (ms) for mapped sequence to complete
-	ttimeoutlen = 0, -- Wait time for key codes (e.g. escape sequences)
+	ttimeoutlen = 100, -- Wait time for key codes (e.g. escape sequences)
 	title = true, -- Set terminal window title
 	undodir = os.getenv("HOME") .. "/.vim/undodir", -- Directory to store undo history
 	undofile = true, -- Save undo history to a file
 	updatetime = 100, -- Time before triggering CursorHold events
-	wrap = false, -- Don't wrap long lines
+	wrap = true, -- Don't wrap long lines
 	diffopt = {
 		"internal", -- Use internal diff library instead external programs.
 		"filler", -- show filler lines to align line numbers across diffs
@@ -69,6 +69,8 @@ for key, value in pairs(options) do
 end
 
 vim.opt.shortmess:append("c")
+vim.opt.termguicolors = true
+vim.cmd([[set t_BE=]])
 
 local icons = require("utils.icons").icons.diagnostics
 

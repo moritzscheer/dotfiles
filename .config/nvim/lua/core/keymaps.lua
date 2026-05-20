@@ -2,6 +2,8 @@ local set = vim.keymap.set
 
 ---------------------------------- Normal Mode -------------------------------------------
 
+set({ "n", "v" }, "<leader>w", "<cmd>w<cr>", { desc = "Write and Format" })
+
 -- Better up/down
 set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 set({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -57,3 +59,5 @@ set("v", "gs'", "<esc>`>a'<esc>`<i'<esc>", { desc = "Add '' around selection" })
 set("v", "gs`", "<esc>`>a`<esc>`<i`<esc>", { desc = "Add `` around selection" })
 
 set("n", "<leader>q", "<cmd>q<cr>", { desc = "Close current window" })
+
+set("x", "p", "P", { noremap = true, silent = true })

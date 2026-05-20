@@ -20,3 +20,9 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 		end
 	end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.cmd("stopinsert") -- switches to normal mode
+	end,
+})

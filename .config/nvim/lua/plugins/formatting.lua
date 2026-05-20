@@ -4,8 +4,11 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			formatters_by_ft = {
+				cpp = { "clang-format" },
 				css = { "prettier" },
 				html = { "prettier" },
+				-- python = { "ruff_organize_imports", "ruff_format" },
+				python = { "black" },
 				javascript = { "prettier" },
 				javascriptreact = { "prettier" },
 				json = { "jq" },
